@@ -6,9 +6,9 @@ public class FollowWP : MonoBehaviour
 {
     Transform goal;
 
-    float speed = 5.0f;
+    float speed = 10.0f;
     float accuracy = 5.0f;
-    float rotationSpeed = 2.0f;
+    float rotationSpeed = 3.0f;
 
     public GameObject wpManager;
     GameObject[] waypoints;
@@ -26,10 +26,35 @@ public class FollowWP : MonoBehaviour
 
         g = wpManager.GetComponent<WPManager>().graph;
 
-        currentNode = waypoints[0];
+        //currentNode = waypoints[0];
+
+        currentNode = FindClosestWaypoint();
 
         //Invoke("GoToRuins", 3.0f);
+
+        pausemenu.gameIsPaused = false;
     }
+
+
+    GameObject FindClosestWaypoint()
+    {
+        GameObject nearestWp = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+
+        foreach (GameObject wp in waypoints)
+        {
+            float distance = Vector3.Distance(wp.transform.position, currentPosition);
+            if (distance < minDistance)
+            {
+                nearestWp = wp;
+                minDistance = distance;
+            }
+        }
+
+        return nearestWp;
+    }
+
 
     public void GoToHelipad()
     {
@@ -76,8 +101,12 @@ public class FollowWP : MonoBehaviour
 
         if (Vector3.Distance(g.pathList[currentWP].getID().transform.position, this.transform.position) < accuracy)
         {
-            currentNode = g.pathList[currentWP].getID();
+            //currentNode = g.pathList[currentWP].getID();
+            currentNode = FindClosestWaypoint();
+            Debug.Log("currentNode = " + currentNode);
+
             currentWP++;
+            Debug.Log("currentWP = "+ currentWP);
         }
 
         if(currentWP < g.pathList.Count)
@@ -90,5 +119,11 @@ public class FollowWP : MonoBehaviour
             this.transform.Translate(0,0,speed*Time.deltaTime);
 
         }
+        
+    }
+
+    void Update()
+    {
+        currentNode = FindClosestWaypoint();
     }
 }
