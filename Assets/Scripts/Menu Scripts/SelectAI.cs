@@ -17,4 +17,10 @@ public class SelectAI : MonoBehaviour
         pausemenu.gameIsPaused = false;
         Time.timeScale = 1.0f;
     }
+    public void startAutonomousAgents()
+    {
+        SceneManager.LoadScene("Steering");
+        pausemenu.gameIsPaused = false;
+        Time.timeScale = 1.0f;
+    }
 }
