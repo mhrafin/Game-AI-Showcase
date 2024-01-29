@@ -23,4 +23,11 @@ public class SelectAI : MonoBehaviour
         pausemenu.gameIsPaused = false;
         Time.timeScale = 1.0f;
     }
+
+    public void startSwimming()
+    {
+        SceneManager.LoadScene("Swimming");
+        pausemenu.gameIsPaused = false;
+        Time.timeScale = 1.0f;
+    }
 }

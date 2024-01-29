@@ -561,6 +561,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1396610805746453930, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2250180392969280408, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -644,6 +648,62 @@ PrefabInstance:
     - target: {fileID: 2744251705812769697, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690050734291748081, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_text
+      value: "The A* (A-Star) algorithm was invented by computer scientists Nils
+        Nilsson, Peter Hart, and Bertram Raphael during their work on a navigation
+        system for the Shakey robot research project at Stanford in 1968. They initially
+        developed two algorithms, A1 and A2, but found A2 to be the most optimal,
+        which was then renamed A*. This algorithm has become synonymous with AI in
+        games, widely used for planning actions and characters, and determining the
+        best path through an environment.\r\n\r\nThe A* algorithm is intuitive and
+        based on human-like decision-making processes. It involves evaluating paths
+        in environments, like mazes, where movement is restricted to up, down, left,
+        and right directions. The algorithm uses three main values: G (the cost to
+        move from the starting point to a given square on the grid), H (the estimated
+        cost to move from that given square to the final destination), and F (the
+        sum of G and H). The path is determined by selecting the square with the
+        lowest F value at each step.\r\n\r\nWhen an obstacle is encountered, the
+        algorithm recalculates the path, considering the new constraints. The A*
+        algorithm maintains two lists, an open list of squares that need to be examined,
+        and a closed list of squares that have already been examined. The algorithm
+        continues until the goal is reached, constantly updating the G, H, and F
+        values of neighboring squares and choosing the square with the lowest F value
+        to move to next.\r\n\r\nThe A* algorithm is efficient because it only looks
+        as far ahead as necessary, calculating the traveled distance and the estimated
+        remaining distance. This approach ensures that the algorithm doesn't waste
+        resources by looking too far ahead or considering irrelevant paths. At the
+        end of the process, the algorithm can trace back through the squares it has
+        visited to find the optimal path from start to finish.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623925678827805330, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 868.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977979834930743097, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977979834930743097, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977979834930743097, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796685253556602125, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796685253556602125, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796685253556602125, guid: 5e54ee78fbedaee468b6dcdcb6ccb6be, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.68454504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

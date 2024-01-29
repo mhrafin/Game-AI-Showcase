@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 540993887}
   - component: {fileID: 540993886}
   m_Layer: 5
-  m_Name: Autonomous Agents (1)
+  m_Name: Crowd System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 842949219}
         m_TargetAssemblyTypeName: SelectAI, Assembly-CSharp
-        m_MethodName: startAutonomousAgents
+        m_MethodName: startSwimming
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 2
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
